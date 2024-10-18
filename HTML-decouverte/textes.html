@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Page d'accueil du site d'entraînement HTML">
+        <meta name="keywords" content="HTML, CSS, JavaScript, entraînement, étudiants">
+        <title>textes et paragraphes - Site d'entraînement HTML</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1 id="top">Site de démo HTML</h1>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="textes.html">Textes</a>
+                <a href="structures.html">Structures</a>
+                <a href="listes.html">Listes</a>
+                <a href="medias.html">Médias</a>
+                <a href="tableaux.html">Tableaux</a>
+                <a href="formulaires.html">Formulaires</a>
+                <a href="stylesTexte.html">Mise en forme CSS</a>
+            </nav>
+        </header>
+        </header>
+
+        <main>
+            <section>
+                <h2>Le texte, les paragraphes, les titres et les citations</h2>
+                <h3>Les balises de mise en évidence sémantiques</h3>
+                <p>
+                    Voici un exemple d'utilisation des balises sémantiques <code>&lt;code&gt;</code>,<code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code>, <code>&lt;mark&gt;</code>, <code>&lt;del&gt;</code> et <code>&lt;ins&gt;</code> pour mettre en valeur du texte.
+                </p>
+                <p>la balise <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/code"><code>&lt;code&gt;</code></a> permet d'indiquer que le texte est du code informatique : <code>var x = 5;</code></p>
+                <p>la balise <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/strong"><code>&lt;strong&gt;</code></a> permet d'indiquer que le texte a une importance particulière ou un certain sérieux voire un caractère urgent. Cela se traduit généralement par un affichage en gras : <strong>Attention !</strong>
+                <p>La balise <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/em"><code>&lt;em&gt;</code></a> permet de mettre en valeur un texte en italique pour indiquer qu'il est important ou qu'il doit être lu avec attention : <em>Il est important de lire les consignes avant de commencer.</em></p>
+                <p>La balise <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/mark"><code>&lt;mark&gt;</code></a> permet de mettre en évidence un passage de texte en le surlignant : <mark>Voici un passage important à retenir.</mark></p>
+                <p>La balise <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/del"><code>&lt;del&gt;</code></a> permet de barrer un texte pour indiquer qu'il a été supprimé : <del>Ce texte a été supprimé.</del></p>
+                <p>La balise <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/ins"><code>&lt;ins&gt;</code></a> permet de souligner un texte pour indiquer qu'il a été ajouté : <ins>Ce texte a été ajouté.</ins>
+                </p>
+                <p class="note">
+                    Certaines anciennes balises HTML comme <code>&lt;u&gt;</code>, <code>&lt;b&gt;</code>, <code>&lt;i&gt;</code> et  <code>&lt;s&gt;</code> sont actuellement dépréciées et ne devraient plus être utilisées. Elles servaient respectivement à souligner, mettre en gras, mettre en italique et barrer du texte. 
+                    <br>
+                    Il est maintenant recommandé d'utiliser les balises sémantiques pour une meilleure accessibilité et une meilleure structure du contenu. Pour la Mise en forme CSS, il est préférable d'utiliser les feuilles de style CSS.
+                </p>
+            </section>      
+            <section>
+                <h2>Les paragraphes</h2>
+                <p>Un paragraphe est une unité de texte qui se compose d'une ou plusieurs phrases. Il est délimité par une balise <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/p"><code>&lt;p&gt;</code></a> et peut contenir d'autres balises HTML.</p>
+            </section>      
+            <section>
+                <h2>Les titres</h2>
+                <p>
+                    Ceci est un paragraphe qui explique l'utilisation des balises de titres <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/Heading_Elements" target="_blank"><code>&lt;h1&gt;</code> à <code>&lt;h6&gt;</code></a> pour structurer le contenu.
+                    <br>
+                    <strong>Les différents niveaux de titre indiquent l'organisation du document.</strong>
+                    <br>
+                    La taille d'affichage du texte de ces éléments pourra être redéfinie dans la feuille de style css</em>
+                </p>   
+                <h3>Exemple de sous-titre</h3>         
+                <h4>Un sous-titre plus petit</h4>
+                <h5>Un sous-titre encore plus petit</h5>
+                <h6>Le niveau de titre le plus petit</h6>
+            </section>      
+            <section>
+                <h2>Les citations et les abréviations</h2>
+                <p>Pour citer un texte, on peut utiliser les balises <code>&lt;q&gt;</code> pour les citations courtes et <code>&lt;blockquote&gt;</code> pour les citations longues. On peut également utiliser les balises <code>&lt;cite&gt;</code> pour indiquer la source d'une citation.</p>
+                <p>Voici un exemple de citation courte : <q>Le Lorem Ipsum est un texte de remplissage.</q></p>
+                <p>Et un exemple de citation longue :
+                    <blockquote>
+                        <p>Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Il a survécu non seulement à cinq siècles, mais aussi à la transition vers la composition électronique, sans jamais perdre de sa popularité.</p>
+                    </blockquote>
+                </p>
+                <p>Enfin un exemple de citation avec source : <q>Le Lorem Ipsum est un texte de remplissage.</q> - <cite>Wikipedia</cite></p>
+                <p>Les abréviations peuvent être définies avec la balise <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/abbr"><code>&lt;abbr&gt;</code></a> : <abbr title="HyperText Markup Language">HTML</abbr></p>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2024 - Site d'entraînement HTML pour étudiants</p>
+        </footer>
+
+    </body>
+</html>

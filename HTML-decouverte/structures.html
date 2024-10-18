@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Page sur les structures et les liens">
+        <meta name="keywords" content="HTML, CSS, JavaScript, structures, liens">
+        <title>Structures - Site d'entraînement HTML</title>
+        <link rel="stylesheet" href="../../../css/styles.css">
+        <link rel="icon" type="image/png" href="../../../images/favicon.png">
+        <style>
+            #explication {
+                color: red;
+                font-style: italic;
+                font-size: smaller;
+            }
+
+            .encadre {
+                border-radius: 5px;
+                background-color: aliceblue;
+                padding: 2em;
+                border: 1px double cornflowerblue;
+                margin: 1em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1 id="top">Site de démo HTML</h1>
+            <nav>
+                <a href="../../../index.html">Accueil</a>
+                <a href="../../../textes.html">Textes</a>
+                <a href="structures.html">Structures</a>
+                <a href="../../../listes.html">Listes</a>
+                <a href="../../../medias.html">Médias</a>
+                <a href="../../../tableaux.html">Tableaux</a>
+                <a href="../../../formulaires.html">Formulaires</a>
+                <a href="../../../stylesTexte.html">Mise en forme CSS</a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>Les éléments de Structure</h2>
+                <p>
+                    Voici un exemple d'utilisation des éléments de structure <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/div" target="_blank"><strong><code>&lt;div&gt;</code></strong></a> et <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/span" target="_blank"><strong><code>&lt;span&gt;</code></strong></a> pour organiser le contenu.
+                    <br>
+                    <em>Les éléments de structure permettent de découper le contenu en sections et de le mettre en forme.</em>
+                </p>
+                <div class="encadre">
+                    <h3>Un div avec une classe</h3>
+                    <p>La classe <em>encadre</em> est un élément du CSS de la page qui permet de définir un style particulier à tous les éléments qui l'appellent. Ici une bordure arrondie bleue foncée, un fond bleu clair et une marge interne (padding) de 2em et une marge externe (margin) de 1em. Ce style va s'appliquer à tous les éléments qui l'appellent (comme ce div et le aside plus bas sur cette page) avec l'attribut <code>class="encadre"</code>.</p>
+                    <span id="explication">
+                        <p>Ce span a un identifiant <em>explication_lorem</em> permettant de lui attribuer un style CSS particulier. Ce style défini en haut de cette page dans la balise <code>&lt;style&gt;</code>, défini que l'élément aura une police rouge, un style en italique et une taille de police plus petite.</p>
+                    </span>
+                </div>
+                <article>
+                    <p>L'élément <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/article" target="_blank"><strong><code>&lt;article&gt;</code></strong></a> représente une composition autonome dans un document, une page, une application ou un site, destinée à être distribuée ou réutilisée de manière indépendante (par exemple, dans le cadre d'une syndication). Exemples : un message de forum, un article de magazine ou de journal, ou un article de blog, une fiche produit, un commentaire soumis par un utilisateur, un widget ou gadget interactif, ou tout autre élément de contenu indépendant.</p>
+                </article>
+                <aside>
+                    <p>L'élément <a href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/aside" target="_blank"><strong><code>&lt;aside&gt;</code></strong></a> (en français, « aparté ») représente une partie d'un document dont le contenu n'a qu'un rapport indirect avec le contenu principal du document. Les apartés sont fréquemment présents sous la forme d'encadrés ou de boîtes de légende.</p>
+                </aside>
+            </section>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2024 - Site d'entraînement HTML pour étudiants</p>
+        </footer>
+
+    </body>
+</html>

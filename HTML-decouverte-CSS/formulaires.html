@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Page sur les tableaux les formulaires">
+        <meta name="keywords" content="HTML, CSS, JavaScript, formulaires">
+        <title>Formulaires - Site d'entraînement HTML</title>
+        <link rel="stylesheet" href="css/style-alternatif.css">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1 id="top">Site de démo HTML</h1>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="textes.html">Textes</a>
+                <a href="structures.html">Structures</a>
+                <a href="listes.html">Listes</a>
+                <a href="medias.html">Médias</a>
+                <a href="tableaux.html">Tableaux</a>
+                <a href="formulaires.html">Formulaires</a>
+                <a href="stylesTexte.html">Mise en forme CSS</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section>
+                <h2>Formulaire de contact</h2>
+                <div id="contact">
+                    <form action="#" method="POST">
+                        <label for="nom">Nom :</label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                        
+                        <label for="email">Email :</label>
+                        <input type="email" id="email" name="email" placeholder="Votre email">
+                        
+                        <label for="message">Message :</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message"></textarea>
+                        
+                        <fieldset>
+                            <legend>Choisissez une option :</legend>
+                            <label for="option1">
+                                <input type="radio" id="option1" name="options" value="option1"> Option 1
+                            </label>
+                            <label for="option2">
+                                <input type="radio" id="option2" name="options" value="option2"> Option 2
+                            </label>
+                            <label for="option3">
+                                <input type="radio" id="option3" name="options" value="option3"> Option 3
+                            </label>
+                        </fieldset>
+                        
+                        <fieldset>
+                            <legend>Sélectionnez vos préférences :</legend>
+                            <label for="pref1">
+                                <input type="checkbox" id="pref1" name="preferences" value="pref1"> Préférence 1
+                            </label>
+                            <label for="pref2">
+                                <input type="checkbox" id="pref2" name="preferences" value="pref2"> Préférence 2
+                            </label>
+                            <label for="pref3">
+                                <input type="checkbox" id="pref3" name="preferences" value="pref3"> Préférence 3
+                            </label>
+                        </fieldset>
+                        
+                        <label for="selection">Choisissez une option :</label>
+                        <select id="selection" name="selection">
+                            <option value="choix1">Choix 1</option>
+                            <option value="choix2">Choix 2</option>
+                            <option value="choix3">Choix 3</option>
+                        </select>
+                        
+                        <button type="submit">Envoyer</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 - Site d'entraînement HTML pour étudiants</p>
+        </footer>
+
+    </body>
+</html>

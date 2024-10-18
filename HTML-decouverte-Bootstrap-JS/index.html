@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Bootstrap, JavaScript, entraînement, étudiants">
+    <title>Structure de base - Site d'entraînement HTML</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- bibliothèque de styles pour Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- scripts pour Bootstrap (nécessaire pour les composants JavaScript de Bootstrap) : Popper.js puis Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- bibliothèque de styles pour les icônes Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- scripts personnalisés, l'attribut defer permet de charger le script après le chargement complet de la page -->
+    <!-- <script src="js/menuDeroulant.js" defer></script> -->
+    <script src="js/menuDeroulantEvolution.js" defer></script>
+    <noscript>
+        <p>Attention : JavaScript est désactivé sur votre navigateur. Certaines fonctionnalités du site peuvent ne pas fonctionner correctement.</p>
+    </noscript>
+</head>
+
+<body id="top">
+    <header>
+        <div class="bg-primary text-white text-center py-3">
+            <h1>Site de démo Bootstrap et JS</h1>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Accueil</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <!-- <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#intro">Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#bootstrap">Bootstrap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#javascript">JavaScript</a>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content container">
+        <section class="border p-3 mb-4 bg-light shadow-sm" class="border p-3 mb-4 bg-light shadow-sm" id="intro" >
+            <h2 texteMenu="Introduction">Introduction<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h2>
+            <p>
+                Bienvenue sur le site d'entraînement Bootstap et JS. Vous y trouverez des exemples d'utilisation de styles bootstrap et de script JS.
+                <br>
+                <em>ce site est divisé en sections et articles accessibles via le menu.</em>
+            </p>
+        </section>
+
+        <section class="border p-3 mb-4 bg-light shadow-sm" id="rappels">
+            <h2 texteMenu="HTML/CSS">Rappels sur HTML et CSS<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h2>
+            <p>
+                <strong>HTML</strong> (HyperText Markup Language) est un langage de balisage utilisé pour structurer le contenu d'une page web. Il est composé de balises qui définissent la structure et le contenu de la page.
+                <br>
+                La structure d'une page HTML à la forme d'un arbre nommé <strong>DOM</strong> (Document Object Model). Chaque élément HTML est un nœud de l'arbre, et peut contenir d'autres éléments ou du texte.
+                <br>
+                <img src="images/dom.png" alt="illustration DOM" class="img-fluid mx-auto d-block rounded shadow" style="max-width: 600px;">
+                <br>
+                Cette structure est ensuite stylisée à l'aide de CSS, qui permet de définir des règles de style pour les éléments HTML, comme la couleur, la taille, la police, la marge, le padding, etc.
+            </p>
+        </section>
+
+        <section class="border p-3 mb-4 bg-light shadow-sm" id="bootstrap-def">
+            <h2 texteMenu="Bootstrap 5">Explications sur Bootstrap 5<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h2>
+            <p>
+                <p>Bootstrap est un <strong>framework</strong> front-end. Un framework est un ensemble de composants réutilisables et de conventions qui facilitent le développement d'applications web en fournissant une structure de base et des outils prêts à l'emploi. Bootstrap inclut des styles CSS, des composants JavaScript, et des modèles de mise en page qui permettent de créer des interfaces utilisateur cohérentes et réactives.</p>
+
+                <p>Voici quelques caractéristiques qui font de Bootstrap un framework populaire :</p>
+
+                <ul>
+                    <li><strong>Composants réutilisables :</strong> Bootstrap fournit une vaste gamme de composants UI prêts à l'emploi, tels que des boutons, des formulaires, des cartes, des alertes, des modales, etc. Ces composants sont déjà stylisés et peuvent être utilisés sans effort.</li>
+                    <li><strong>Responsive design :</strong> Bootstrap est conçu pour être responsive dès le départ. Grâce à son système de grille et à ses classes utilitaires, il est facile de créer des mises en page qui s'adaptent automatiquement à différentes tailles d'écran, offrant ainsi une expérience utilisateur optimale sur mobile, tablette et desktop.</li>
+                    <li><strong>Styles CSS prédéfinis :</strong> Bootstrap offre des styles CSS pour la typographie, les tableaux, les images, et bien plus encore, ce qui permet de maintenir une apparence cohérente et professionnelle.</li>
+                    <li><strong>Plugins JavaScript :</strong> Bootstrap inclut de nombreuses extensions JavaScript pour ajouter des fonctionnalités interactives, comme les carrousels, les modales, les tooltips, les menus déroulants, et les accordéons, sans écrire de JavaScript complexe.</li>
+                    <li><strong>Personnalisation :</strong> Bootstrap peut être personnalisé en modifiant les variables Sass pour adapter les styles aux besoins spécifiques d'un projet.</li>
+                    <li><strong>Compatibilité multi-navigateurs :</strong> Bootstrap assure une compatibilité avec la plupart des navigateurs modernes, ce qui réduit les efforts nécessaires pour corriger des bugs d’affichage.</li>
+                </ul>
+
+            </p>
+            <p>
+                Pour utiliser Bootstrap, il suffit d'inclure les fichiers CSS et JavaScript de la bibliothèque dans votre page HTML, et d'ajouter les classes Bootstrap aux éléments que vous souhaitez styliser.<br>
+                Pour inclure Bootstrap dans votre projet, vous pouvez utiliser les CDN (Content Delivery Network) fournis par Bootstrap, ou télécharger les fichiers directement sur le site officiel. Dans ce cas, vous devrez les ajouter à votre projet en les important dans votre fichier HTML.                
+                <br>
+                <div>
+                    <p></p>Voici un exemple d'inclusion des fichiers Bootstrap via les CDN :
+                    </div></p>
+                    <code class="language-html" data-lang="html">
+                        &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot; integrity=&quot;sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC&quot; crossorigin=&quot;anonymous&quot;&gt;
+                        <br>
+                        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js&quot; integrity=&quot;sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM&quot; crossorigin=&quot;anonymous&quot;&gt;&lt;/script&gt;
+                    </code>
+                </div>
+            </p>
+            <p>
+                Pour plus d'informations, consultez la <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" target="_blank">documentation officielle de Bootstrap</a>.
+
+            </p>
+        </section>
+
+        <section class="border p-3 mb-4 bg-light shadow-sm" id="bootstrap-demo">
+            <h2 texteMenu="Exemples Bootstrap">Exemples d'utilisation de composants Bootstrap<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h2>
+            <p>
+                Cette section, présente des exemples d'utilisation de composants Bootstrap, tels que des barres de navigation, des alertes, des boutons, des cartes, des badges, des formulaires, et des tableaux.
+                <br>
+                Pour chaque exemple, vous trouverez une brève description du composant Bootstrap, ainsi que des exemples d'implémentation dans une page HTML.
+            </p>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="contenus-reactifs">
+                <!-- Exemples de contenus réactifs s'affichant seulement sur un type d'écran -->
+                <h3 texteMenu="Contenus réactifs">Contenus réactifs<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>
+                    Les contenus réactifs (en anglais, responsive content) sont des éléments d'interface utilisateur qui s'adaptent automatiquement à la taille de l'écran sur lequel ils sont affichés. Ils sont souvent utilisés pour afficher des informations de manière optimale sur les appareils mobiles, les tablettes et les ordinateurs de bureau.
+                </p>
+                <p>
+                    Bootstrap propose des classes utilitaires pour masquer ou afficher des éléments en fonction de la taille de l'écran. 
+                    <br>
+                    La classe <code>d-none</code> permet de masquer un élément sur tous les appareils, tandis que les classes <code>d-block</code>, <code>d-sm-block</code>, <code>d-md-block</code>, <code>d-lg-block</code>, et <code>d-xl-block</code> permettent d'afficher un élément uniquement sur les appareils de la taille spécifiée.
+                    <br>
+                    La documentation officielle de Bootstrap propose une liste complète des classes utilitaires pour les contenus réactifs : <a href="https://getbootstrap.com/docs/5.0/utilities/display/" target="_blank">Documentation officielle de Bootstrap</a>.
+                </p>
+                <p>                
+                    Voici quelques exemples d'utilisation de ces classes :
+                </p>
+                <div class="row">
+                    <!-- élément visible uniquement sur les appareils mobiles -->
+                    <div class="d d-sm-none bg-info">
+                        <p>Bloc 1</p>
+                    </div>
+                    <!-- élément visible uniquement sur les tablettes -->
+                    <div class="d-none d-sm-block d-md-none bg-success">
+                        <p>Bloc 2</p>
+                    </div>
+                    <!-- élément visible uniquement sur les ordinateurs de bureau -->
+                    <div class="d-none d-md-block bg-warning">
+                        <p>Bloc 3</p>
+                    </div>
+                    <!-- élément visible sur les mobiles et les ordinateurs de bureau mais pas sur les tablettes -->
+                    <div class="d-block d-md-none d-lg-block bg-danger">
+                        <p>Bloc 4</p>
+                    </div>
+                </div>
+            </article>  
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="exemple-navbar">
+                <!-- Exemples de barre de navigation Bootstrap -->
+                <h3 texteMenu="Barre de navigation">Barre de navigation Bootstrap<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>
+                    Les barres de navigation Bootstrap sont des éléments d'interface utilisateur utilisés pour afficher des liens de navigation sur une page web. Elles sont souvent utilisées pour permettre aux utilisateurs de naviguer entre les différentes sections d'un site web.
+                    <br>
+                    Les barres de navigation Bootstrap peuvent être <strong>réactives</strong> et s'adapter automatiquement à la taille de l'écran, offrant une expérience utilisateur cohérente sur les appareils de bureau, les tablettes et les smartphones.
+                </p>
+                <p>
+                    Plus d'informations sur les barres de navigation Bootstrap : <a href="https://getbootstrap.com/docs/5.0/components/navbar/" target="_blank">Documentation officielle de Bootstrap</a>.
+                </p>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#exemple-navbar">Exemple de Navbar</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#exemple-navbar">Accueil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#exemple-navbar">Fonctionnalités</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#exemple-navbar">À propos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#exemple-navbar">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <div class="alert alert-info" role="alert">
+                    La barre de navigation ci-dessus est un exemple de barre de navigation Bootstrap. Elle contient un logo, un bouton de bascule pour les appareils mobiles, et une liste de liens de navigation. La barre de navigation est réactive et s'adapte automatiquement à la taille de l'écran. Testez-la en redimensionnant la fenêtre du navigateur pour voir comment elle s'adapte.
+                </div>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="grille">
+                <!-- Exemples de grille Bootstrap -->
+                <h3 texteMenu="Grille Bootstrap">Grille Bootstrap<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>
+                    La grille Bootstrap est un système de mise en page qui permet de créer des mises en page réactives et adaptatives pour les sites web. Elle est basée sur un système de colonnes et de rangées qui permet de diviser l'espace de la page en 12 colonnes, et de positionner les éléments de manière flexible.
+                </p>
+                <p>
+                    Plus d'informations sur la grille Bootstrap : <a href="https://getbootstrap.com/docs/5.0/layout/grid/" target="_blank">Documentation officielle de Bootstrap</a>.
+                </p>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="bg-primary text-white p-3">Colonne 1 de taille 3/12</div>
+                    </div>
+                    <div class="col-3">
+                        <div class="bg-secondary text-white p-3">Colonne 2 de taille 3/12</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="bg-success
+                        text-white p-3">Colonne 3 de taille 6/12</div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="barres">
+                <!-- Exemples de barres de progression Bootstrap -->
+                <h3 texteMenu="Barres de progression">Barres de progression Bootstrap<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>
+                    Les barres de progression Bootstrap sont des éléments d'interface utilisateur utilisés pour afficher l'avancement d'une tâche ou d'une opération sur une page web. Elles sont souvent utilisées pour indiquer le pourcentage de complétion d'une action, comme le chargement d'une page, le téléchargement d'un fichier, ou la soumission d'un formulaire.
+                </p>
+                <p>
+                    Plus d'informations sur les barres de progression Bootstrap : <a href="https://getbootstrap.com/docs/5.0/components/progress/" target="_blank">Documentation officielle de Bootstrap</a>.
+                </p>
+                <div class="progress">
+                    <div class="progress-bar bg-primary" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+                <br>
+                <div class="progress">
+                    <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                </div>
+            </article>
+            
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="alertes">
+                <!-- Exemples d'alertes Bootstrap -->
+                <h3 texteMenu="Alertes Bootstrap">Alertes Bootstrap<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>
+                    Les alertes Bootstrap sont des éléments d'interface utilisateur utilisés pour afficher des messages d'information, de succès, d'avertissement ou d'erreur sur une page web. Elles sont souvent utilisées pour informer les utilisateurs de l'état d'une action, d'une erreur de saisie, ou d'une notification importante.
+                </p>
+                <p>
+                    Plus d'informations sur les alertes Bootstrap : <a href="https://getbootstrap.com/docs/5.0/components/alerts/" target="_blank">Documentation officielle de Bootstrap</a>.
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div class="alert alert-primary" role="alert">
+                            Ceci est une alerte primaire.
+                        </div>
+                        <div class="alert alert-secondary" role="alert">
+                            Ceci est une alerte secondaire.
+                        </div>
+                        <div class="alert alert-success" role="alert">
+                            Ceci est une alerte de succès.
+                        </div>
+                        <div class="alert alert-danger" role="alert">
+                            Ceci est une alerte de danger.
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="alert alert-warning" role="alert">
+                            Ceci est une alerte d'avertissement.
+                        </div>
+                        <div class="alert alert-info" role="alert">
+                            Ceci est une alerte d'information.
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            Ceci est une alerte légère.
+                        </div>
+                        <div class="alert alert-dark" role="alert">
+                            Ceci est une alerte sombre.
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="boutons">
+                <!-- Exemples de bouton Bootstrap -->
+                <h3 texteMenu="Boutons">Boutons Bootstrap<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>
+                    Les boutons Bootstrap sont des éléments d'interface utilisateur utilisés pour déclencher des actions ou des événements sur une page web. Ils sont souvent utilisés pour envoyer des formulaires, ouvrir des modales, ou effectuer des actions interactives.
+                </p>
+                <p>
+                    Plus d'informations sur les boutons Bootstrap : <a href="https://getbootstrap.com/docs/5.0/components/buttons/" target="_blank">Documentation officielle de Bootstrap</a>.
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <button type="button" class="btn btn-primary">Bouton primaire</button>
+                        <button type="button" class="btn btn-secondary">Bouton secondaire</button>
+                        <button type="button" class="btn btn-success">Bouton de succès</button>
+                        <button type="button" class="btn btn-danger">Bouton de danger</button>
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn btn-warning">Bouton d'avertissement</button>
+                        <button type="button" class="btn btn-info">Bouton d'information</button>
+                        <button type="button" class="btn btn-light">Bouton léger</button>
+                        <button type="button" class="btn btn-dark">Bouton sombre</button>
+                    </div>
+                </div>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="cartes">
+                <!-- Exemple de carte Bootstrap -->
+                <h3 texteMenu="Cartes">Carte Bootstrap<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>
+                    Les cartes Bootstrap sont des éléments d'interface utilisateur utilisés pour afficher des contenus structurés, tels que des images, des titres, des textes, des boutons, etc. Elles sont souvent utilisées pour afficher des informations sous forme de cartes, comme des articles de blog, des produits, des profils d'utilisateurs, etc.
+                </p>
+                <p>
+                    Plus d'informations sur les cartes Bootstrap : <a href="https://getbootstrap.com/docs/5.0/components/card/" target="_blank">Documentation officielle de Bootstrap</a>.
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <div class="card">
+                            <img src="images/icons-hero.png" class="card-img-top" alt="image de Bootstrap icons" width="150px">
+                            <div class="card-body">
+                                <h5 class="card-title">Carte Bootstrap avec image</h5>
+                                <p class="card-text">Ceci est un exemple de carte Bootstrap.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card text-center">
+                            <div class="card-header">
+                              Carte avec en-tête
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title">Titre de carte</h5>
+                              </h5>
+                              <p class="card-text">
+                                Contenu de carte qui peut inclure du texte, des liens, des boutons, etc.
+                              </p>
+                            </div>
+                            <div class="card-footer text-muted">
+                              pied de carte
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="icons">
+                <!-- Exemple de bootstrap icons -->
+                <h3 texteMenu="Icones">Bootstrap Icons<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>
+                    Bootstrap Icons est une bibliothèque d'icônes open-source conçue pour être utilisée avec Bootstrap. Elle contient une collection d'icônes vectorielles qui peuvent être facilement intégrées dans des projets web.
+                </p>
+                <p>
+                    Pour utiliser les icônes Bootstrap, vous devez inclure le fichier CSS de la bibliothèque d'icônes dans votre page HTML. Voici un exemple d'inclusion du fichier CSS des icônes Bootstrap via CDN :
+                <br>
+                <code class="language-html" data-lang="html">
+                    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css&quot; rel=&quot;stylesheet&quot;&gt;
+                </code>
+                </p>
+                <p>
+                    Plus d'informations sur Bootstrap Icons : <a href="https://icons.getbootstrap.com/" target="_blank">Site officiel de Bootstrap Icons</a>.
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <h4>Exemple d'utilisation d'icônes Bootstrap</h4>
+                        <p>
+                            Voici quelques exemples d'utilisation d'icônes Bootstrap dans une page web :
+                        </p>
+                        <ul class="list-group">
+                            <li class="list-group-item"> <i class="bi bi-umbrella"></i> parfois il pleut</li>
+                            <li class="list-group-item"> <i class="bi bi-lightning"></i> attention aux orages</li>
+                            <li class="list-group-item"> <i class="bi bi-sun" style="color: orange;"></i> profitez du soleil</li>
+                            <li class="list-group-item"> <i class="bi bi-sun" style="color:red;"></i> sauf quand il est ainsi</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="listes">
+                <!-- Exemple de liste de groupe Bootstrap -->
+                <h3 texteMenu="Listes structurées">Listes de groupe Bootstrap<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>
+                    Les listes de groupe Bootstrap sont des éléments d'interface utilisateur utilisés pour afficher des listes d'éléments structurés. Elles sont souvent utilisées pour afficher des listes d'éléments, comme des articles, des produits, des catégories, etc.
+                </p>
+                <p>
+                    Plus d'informations sur les listes de groupe Bootstrap : <a href="https://getbootstrap.com/docs/5.0/components/list-group/" target="_blank">Documentation officielle de Bootstrap</a>.
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <h4>Liste verticale</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">Élément 1 sans style</li>
+                            <li class="list-group-item list-group-item-info">Élément 2 avec style info</li>
+                            <li class="list-group-item active" aria-current="true">Élément 3 marqué comme actif</li>
+                        </ul>  
+                    </div>
+                    <div class="col">
+                        <h4>Liste numérotée</h4>
+                        <ol class="list-group list-group list-group-numbered">
+                            <li class="list-group-item">Élément 1</li>
+                            <li class="list-group-item">Élément 2</li>
+                            <li class="list-group-item">Élément 3</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <h4>Liste horizontale</h4>
+                    <ul class="list-group list-group-horizontal">
+                        <li class="list-group-item">Élément 1</li>
+                        <li class="list-group-item active">Élément 2</li>
+                        <li class="list-group-item">Élément 3</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="badges">
+                <!-- Exemple d'utilisation de badges Bootstrap -->
+                <h3 texteMenu="Badges">Badges Bootstrap<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>
+                    Les badges Bootstrap sont des éléments d'interface utilisateur utilisés pour afficher des informations supplémentaires ou des indicateurs de statut. Ils sont souvent utilisés pour montrer des notifications, des compteurs, des étiquettes ou des indicateurs de statut sur des éléments comme des boutons, des cartes, des listes, etc.
+                </p>
+                <p>
+                    Les badges peuvent être stylisés avec différentes classes de couleurs pour indiquer différents types d'informations, comme <code>bg-primary</code>, <code>bg-secondary</code>, <code>bg-success</code>, <code>bg-danger</code>, <code>bg-warning</code>, <code>bg-info</code>, <code>bg-light</code>, et <code>bg-dark</code>.
+                </p>
+                <p>
+                    Plus d'informations sur les badges Bootstrap : <a href="https://getbootstrap.com/docs/5.0/components/badge/" target="_blank">Documentation officielle de Bootstrap</a>.
+                </p>
+                <p>
+                    Voici quelques exemples d'utilisation des badges Bootstrap :
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <!-- bouton avec badge -->
+                        <h3>Bouton avec badge<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                        <button type="button" class="btn btn-primary">
+                            Notifications <span class="badge bg-warning">4</span>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <!-- liste avec badge -->
+                        <h3>Liste avec badge<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                Item 1
+                                <span class="badge bg-primary rounded-pill">14</span>
+                            </li>
+                            <li class="list-group-item">
+                                Item 2
+                                <span class="badge bg-secondary rounded-pill">2</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col">
+                        <!-- carte avec badge -->
+                        <h3>Carte avec badge<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title <span class="badge bg-success">New</span></h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="forms">
+                <!-- Exemple de formulaire Bootstrap -->
+                <h3 texteMenu="Formulaires">Formulaires<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>
+                    Les formulaires Bootstrap sont des éléments d'interface utilisateur utilisés pour collecter des informations auprès des utilisateurs. Ils sont souvent utilisés pour saisir des données, envoyer des commentaires, ou effectuer des actions sur un site web.
+                </p>
+                <p>
+                    Plus d'informations sur les formulaires Bootstrap : <a href="https://getbootstrap.com/docs/5.0/forms/overview/" target="_blank">Documentation officielle de Bootstrap</a>.
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <h4>Exemple de formulaire de contact</h4>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Nom</label>
+                                <input type="text" class="form-control" id="name" placeholder="Entrez votre nom">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Adresse e-mail</label>
+                                <input type="email" class="form-control" id="email" placeholder="Entrez votre adresse e-mail">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="3" placeholder="Entrez votre message"></textarea>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label class="form-label">Préférences</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="preference1">
+                                    <label class="form-check-label" for="preference1">
+                                        Préférence 1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="preference2">
+                                    <label class="form-check-label" for="preference2">
+                                        Préférence 2
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="preference3">
+                                    <label class="form-check-label" for="preference3">
+                                        Préférence 3
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Options</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="options" id="option1" value="option1" checked>
+                                    <label class="form-check-label" for="option1">
+                                        Option 1
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="options" id="option2" value="option2">
+                                    <label class="form-check-label" for="option2">
+                                        Option 2
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="options" id="option3" value="option3">
+                                    <label class="form-check-label" for="option3">
+                                        Option 3
+                                    </label>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                        </form>
+                    </div>
+                </div>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="tableaux">
+                <!-- Exemple de tableau Bootstrap -->
+                <h3 texteMenu="Tableaux">Tableaux<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>
+                    Les tableaux Bootstrap sont des éléments d'interface utilisateur utilisés pour afficher des données sous forme de lignes et de colonnes. Ils sont souvent utilisés pour afficher des informations tabulaires, comme des listes de produits, des données financières, des résultats de recherche, etc.
+                </p>
+                <p>
+                    Plus d'informations sur les tableaux Bootstrap : <a href="https://getbootstrap.com/docs/5.0/content/tables/" target="_blank">Documentation officielle de Bootstrap</a>.
+                </p>
+                <div class="row">
+                    <div class="col">
+                        <h4>Exemple de tableau de données</h4>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Prénom</th>
+                                    <th scope="col">Nom</th>
+                                    <th scope="col">Âge</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>John</td>
+                                    <td>Doe</td>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>Jane</td>
+                                    <td class="table-active">Smith</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>James</td>
+                                    <td>Brown</td>
+                                    <td>35</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h4>Exemple de tableau avec bordure et lignes alternées</h4>
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Visites</th>
+                                    <th scope="col">Pages vues</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>01/01/2022</td>
+                                    <td>100</td>
+                                    <td>500</td>
+                                </tr>
+                                <tr>
+                                    <td>02/01/2022</td>
+                                    <td>120</td>
+                                    <td>550</td>
+                                </tr>
+                                <tr>
+                                    <td>03/01/2022</td>
+                                    <td>150</td>
+                                    <td>600</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="collapse">
+                <!-- Exemple d'elements tiroirs -->
+                <h3 texteMenu="Éléments tiroirs">Éléments tiroirs<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>
+                    Les éléments tiroirs Bootstrap sont des composants d'interface utilisateur qui permettent d'afficher ou de masquer du contenu supplémentaire en cliquant sur un bouton ou un lien. Ils sont souvent utilisés pour afficher des informations supplémentaires, des options de configuration, ou des menus déroulants.
+                </p>
+                <p>
+                    Plus d'informations sur les éléments tiroirs Bootstrap : <a href="https://getbootstrap.com/docs/5.0/components/collapse/" target="_blank">Documentation officielle de Bootstrap</a>.
+                </p>
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                        <h4 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Élément tiroir 1
+                            </button>
+                        </h4>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Contenu de l'élément tiroir 1. Vous pouvez y ajouter du texte, des images, des liens, etc.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h4 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Élément tiroir 2
+                            </button>
+                        </h4>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Contenu de l'élément tiroir 2. Vous pouvez y ajouter du texte, des images, des liens, etc.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h4 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Élément tiroir 3
+                            </button>
+                        </h4>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                Contenu de l'élément tiroir 3. Vous pouvez y ajouter du texte, des images, des liens, etc.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="dropdown">
+                <!-- Exemple de dropdown Bootstrap -->
+                <h3 texteMenu="Menu déroulant">Menu déroulant Bootstrap<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>
+                    Les menus déroulants Bootstrap sont des éléments d'interface utilisateur qui permettent d'afficher une liste d'options ou de liens lorsqu'un bouton ou un lien est cliqué. Ils sont souvent utilisés pour afficher des menus de navigation, des listes déroulantes, ou des options de sélection.
+                </p>
+                <p>
+                    Les menus déroulants necessitent l'ajout de la librairie JavaScript Popper.js pour fonctionner correctement. Vous pouvez inclure Popper.js via CDN en ajoutant la ligne suivante dans votre fichier HTML :
+                    <br>
+                    <code class="language-html" data-lang="html">
+                        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js&quot;&gt;&lt;/script&gt;
+                    </code>
+                </p>
+                <p>
+                    Plus d'informations sur les menus déroulants Bootstrap : <a href="https://getbootstrap.com/docs/5.0/components/dropdowns/" target="_blank">Documentation officielle de Bootstrap</a>.
+                </p>
+
+                <div class="btn-group">
+                    <a class="btn btn-secondary" href="#lien">Menu déroulant</a>
+                    <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="visually-hidden">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                        <li><a class="dropdown-item" href="#action1">Action 1</a></li>
+                        <li><a class="dropdown-item" href="#action2">Action 2</a></li>
+                        <li><a class="dropdown-item" href="#action3">Action 3</a></li>
+                    </ul>
+                </div>
+                
+            </article>
+        </section>
+
+        <section class="border p-3 mb-4 bg-light shadow-sm" id="javascript">
+            <h2 texteMenu="JavaScript">Utilisation de JavaScript<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h2>
+            <p>
+                Le DOM peut être modifié dynamiquement à l'aide de JavaScript, qui permet d'ajouter, de supprimer, ou de modifier des éléments HTML en réponse à des événements utilisateur.
+            </p>
+
+            <p>
+                Voici plusieurs exemples d'utilisation de JavaScript pour modifier le contenu d'une page web :
+            </p>
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="JS-exemple1">
+                <h3 texteMenu="Cacher un élément">Exemple 1 : Modifier le texte d'un élément<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>Voici un exemple simple d'utilisation de JavaScript pour afficher ou cacher un élément HTML en réponse à un clic sur un bouton :</p>
+
+                <button id="jsButton1" class="btn btn-info">Afficher/cacher le texte</button>
+                <p id="jsOutput1" style="display: none;">Texte à afficher</p>
+                <script>
+                    document.getElementById('jsButton1').addEventListener('click', function() {
+                        var outputElement = document.getElementById('jsOutput1');
+                        if (outputElement.style.display === 'none') {
+                            outputElement.style.display = 'block';
+                        } else {
+                            outputElement.style.display = 'none';
+                        }
+                    });
+                </script>
+            </article>
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="JS-exemple2">
+                <h3 texteMenu="MAJ DOM">Exemple 2 : Ajouter un élément<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>Voici un exemple d'utilisation de JavaScript pour ajouter un élément HTML à la page en réponse à un clic sur un bouton :</p>
+
+                <button id="jsButton2" class="btn btn-primary">Ajouter un élément</button>
+                <div id="jsOutput2"></div>
+                <script>
+                    document.getElementById('jsButton2').addEventListener('click', function() {
+                        var newElement = document.createElement('p');
+                        newElement.textContent = 'Nouvel élément ajouté!';
+                        document.getElementById('jsOutput2').appendChild(newElement);
+                    });
+                </script>
+            </article>
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="JS-exemple3">
+                <h3 texteMenu="MAJ styles">Exemple 3 : Modifier les styles<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>Voici un exemple d'utilisation de JavaScript pour modifier les styles CSS d'un élément HTML en réponse à un clic sur un bouton :</p>
+
+                <button id="jsButton3" class="btn btn-warning">Modifier le style</button>
+                <p id="jsOutput3">Texte à modifier</p>
+                <script>
+                    document.getElementById('jsButton3').addEventListener('click', function() {
+                        var outputElement = document.getElementById('jsOutput3');
+                        outputElement.style.color = 'red';
+                        outputElement.style.fontSize = '24px';
+                        outputElement.style.fontWeight = 'bold';
+                        outputElement.style.fontFamily = 'Arial';
+                    });
+                </script>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="JS-exemple4">
+                <h3 texteMenu="Horloge">Exemple 4 : Afficher l'heure<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>Voici un exemple d'utilisation de JavaScript pour afficher l'heure actuelle en temps réel :</p>
+                <p id="jsClock"></p>
+                <script>
+                    function updateClock() {
+                        var now = new Date();
+                        var hours = now.getHours();
+                        var minutes = now.getMinutes();
+                        var seconds = now.getSeconds();
+                        document.getElementById('jsClock').textContent = 'Heure actuelle : ' + hours + ':' + minutes + ':' + seconds;
+                    }
+                    setInterval(updateClock, 1000);
+                </script>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="JS-exemple5">
+                <!-- modifier la feuille de style -->
+                <h3 texteMenu="MAJ CSS et classes">Exemple 5 : Modifier la feuille de style<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>Voici un exemple d'utilisation de JavaScript pour modifier tous les éléments d'une même classe sur la page en réponse à un clic sur un bouton :</p>
+                <button id="jsButton5" class="btn btn-info">Modifier le style de tous les éléments &lt;article&gt;</button>
+                <script>
+                    // Variable pour suivre l'état actuel
+                    var isModified = false;
+                    document.getElementById('jsButton5').addEventListener('click', function() {
+                        var elements = document.querySelectorAll('article');
+                        elements.forEach(function(element) {
+                            if (isModified) {
+                                // Rétablir le style précédent
+                                element.style.color = '';
+                                element.classList.remove('bg-secondary');
+                                element.classList.add('bg-white');
+                            } else {
+                                // Changer la couleur du texte en blanc
+                                element.style.color = 'white';
+                                // Enlever la classe bg-white
+                                element.classList.remove('bg-white');
+                                // Ajouter la classe bg-secondary
+                                element.classList.add('bg-secondary');
+                            }
+                        });
+                        // Basculer l'état
+                        isModified = !isModified;
+                    });
+                </script>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="JS-exemple6">
+                <h3 texteMenu="Menu automatique">Exemple 6 : Menu créé automatiquement par le parcours du DOM<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>Vous pouvez trouver deux exemples plus complexe d'utilisation de JavaScript pour construire automatiquement un menu de navigation à partir des éléments &lt;section&gt; et &lt;artcile&gt; de la page.
+                    <ul>
+                        <li>
+                            <a href="js/menuDeroulant.js" target="_blank">menuDeroulant.js</a> : ce script parcourt le DOM de la page et génère un menu de navigation déroulant à partir des éléments &lt;section&gt; de la page.
+                        </li>
+                        <li>
+                            <a href="js/menuDeroulantEvolution.js" target="_blank">menuDeroulantEvolution.js</a> : ce script parcourt le DOM de la page et génère un menu de navigation déroulant à partir des éléments &lt;section&gt; avec des sous-menus construits à partir des éléments &lt;article&gt; inclus dans chaque section. C'est celui qui est utilisé sur cette page.
+                        </li>
+                    </ul>
+                    Consultez ces code source pour voir comprendre comment le menu de cette page est généré dynamiquement.
+                </p>
+            </article>
+
+        </section>
+    </main>
+
+    
+    <footer class="bg-light text-center py-3">
+        <p>&copy; 2024 - Site d'entraînement bootstrap et JS pour étudiants</p>
+    </footer>
+
+</body>
+</html>

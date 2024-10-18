@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ma première page HTML</title>
+  </head>
+  <body>
+    <!-- Contenu de la page -->
+    <header>
+      <h1>Tiphaine Accary-Barbier</h1>
+      <p>Enseignante en SIO1</p>
+      <!-- Image locale -->
+      <img
+        src="images/avatab.png"
+        alt="Photo de Tiphaine Accary-Barbier"
+        title="Photo de Tiphaine Accary-Barbier"
+      />
+    </header>
+    <hr />
+    <section>
+      <h2>À propos de moi</h2>
+      <p>
+        Je suis une <strong>enseignante</strong> passionnée par l'<em
+          >informatique</em
+        >
+        et le développement web. J'enseigne également en
+        <mark>cybersécurité</mark> du développement d'application...
+      </p>
+      <p>J'enseigne sur le campus CLSI à Lyon !</p>
+      <!-- Image distante -->
+      <img
+        src="https://clsi.fr/wp-content/uploads/2023/11/logo.png"
+        alt="Logo CLSI"
+        title="Logo CLSI"
+      />
+    </section>
+
+    <br />
+
+    <section>
+      <h2>Projets</h2>
+      <ul>
+        <li><strong>Projet 1 :</strong> Description du projet 1.</li>
+        <li><strong>Projet 2 :</strong> Description du projet 2.</li>
+        <li><strong>Projet 3 :</strong> Description du projet 3.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Compétences</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Catégorie</th>
+            <th>Compétence</th>
+            <th>Niveau de maîtrise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Web -->
+          <tr>
+            <td rowspan="2">Web</td>
+            <td>HTML</td>
+            <td>
+              Très bon
+            </td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>
+              Faible
+            </td>
+          </tr>
+          <!-- Développement -->
+          <tr>
+            <td rowspan="3">Développement</td>
+            <td>JavaScript</td>
+            <td>
+              Bon
+            </td>
+          </tr>
+          <tr>
+            <td>Python</td>
+            <td>
+              Assez bon
+            </td>
+          </tr>
+          <tr>
+            <td>PHP</td>
+            <td>
+              Bon
+            </td>
+          </tr>
+          <!-- Données -->
+          <tr>
+            <td rowspan="1">Données</td>
+            <td>SQL</td>
+            <td>
+              Très bon
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Formulaire de contact</h2>
+      <form>
+        <div>
+          <label for="name">Nom</label>
+          <input type="text" id="name" placeholder="Votre nom">
+        </div>
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Votre email">
+        </div>
+        <div>
+          <label for="message">Message</label>
+          <textarea id="message" rows="3" placeholder="Votre message"></textarea>
+        </div>
+        <div>
+          <label for="objet">Objet</label>
+          <select id="objet">
+            <option value="1">Demande d'infos sur le BTS</option>
+            <option value="2">Demande de mise en contact</option>
+            <option value="3">Proposition de stage</option>
+            <option value="4">Autre</option>
+          </select>
+        </div>
+
+        <button type="submit" >Envoyer</button>
+      </form>
+    </section>
+
+
+
+
+    <section>
+      <h2>Mes coordonnées</h2>
+      <p>
+        Vous pouvez me contacter à l'adresse suivante :
+        <a href="mailto:tiphaine.accary-barbier@icof.fr"
+          >tiphaine.accary-barbier@icof.fr</a
+        >
+        et consulter ma page
+        <a
+          href="https://www.linkedin.com/in/tiphaine-accary-barbier-7b1b3b1b1/"
+          target="_blank"
+          >LinkedIn</a
+        >
+        pour plus d'informations.
+      </p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+- html (lang="fr")
+  - head
+    - meta (charset="UTF-8")
+    - meta (name="viewport", content="width=device-width, initial-scale=1.0")
+    - meta (name="description", content="Page d'accueil du site d'entraînement HTML")
+    - meta (name="keywords", content="HTML, CSS, JavaScript, entraînement, étudiants")
+    - title: "Structure de base - Site d'entraînement HTML"
+    - link (rel="stylesheet", href="css/styles.css")
+    - link (rel="icon", type="image/png", href="images/favicon.png")
+    - style
+      - #intro { ... }
+    - script
+    - script (src="js/script.js")
+    - noscript
+      - p: "..."
+  - body
+    - header
+      - h1 (id="top"): "Site de démo HTML"
+      - nav
+        - a (href="index.html"): "Accueil"
+        - a (href="textes.html"): "Textes"
+        - a (href="structures.html"): "Structures"
+        - a (href="listes.html"): "Listes"
+        - a (href="medias.html"): "Médias"
+        - a (href="tableaux.html"): "Tableaux"
+        - a (href="formulaires.html"): "Formulaires"
+        - a (href="stylesTexte.html"): "Mise en forme CSS"
+    - main
+      - p (id="intro")
+        - text: "Bienvenue sur le site d'entraînement HTML pour étudiants. ..."
+        - br
+        - em: "Le site est divisé en plusieurs pages pour vous permettre de vous exercer ..."
+      - hr
+      - p
+        - text: "<strong>HTML</strong> (HyperText Markup Language) est un langage de balisage ..."
+        - br
+        - text: "<strong>CSS</strong> (Cascading Style Sheets) est un langage de feuilles de style ..."
+      - h2: "Les liens et les ancres"
+      - p
+        - text: "Voici un lien vers "
+          - a (href="https://www.google.com", target="_blank"): "Google"
+          - text: " qui s'ouvrira dans un nouvel onglet."
+        - br
+        - text: "Voici un lien interne vers "
+          - a (href="page1.html"): "la page 1"
+          - text: " de ce site qui s'ouvrira dans la même fenêtre."
+        - br
+        - text: "Pour revenir en haut de la page ..."
+          - a (href="#top"): "cliquez ici"
+        - br
+        - em
+          - text: "La documentation des ancres est disponible "
+          - a (href="https://developer.mozilla.org/fr/docs/Web/HTML/Element/a", target="_blank"): "sur le site developer.mozilla.org"
+      - h2: "Lorem Ipsum"
+      - p
+        - text: "..."
+      - p
+        - text: "..."
+      - p
+        - text: "..."
+      - p
+        - text: "..."
+      - p
+        - text: "..."        
+
+    - footer
+      - p: "© 2024 - Site d'entraînement HTML pour étudiants"

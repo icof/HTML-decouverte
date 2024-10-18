@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Page sur les tableaux">
+        <meta name="keywords" content="HTML, CSS, JavaScript, tableaux">
+        <title>Tableaux - Site d'entraînement HTML</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="icon" type="image/png" href="images/favicon.png">
+    </head>
+
+    <body>
+        <header>
+            <h1 id="top">Site de démo HTML</h1>
+            <nav>
+                <a href="index.html">Accueil</a>
+                <a href="textes.html">Textes</a>
+                <a href="structures.html">Structures</a>
+                <a href="listes.html">Listes</a>
+                <a href="medias.html">Médias</a>
+                <a href="tableaux.html">Tableaux</a>
+                <a href="formulaires.html">Formulaires</a>
+                <a href="stylesTexte.html">Mise en forme CSS</a>
+            </nav>
+        </header>
+
+        <main>
+            <section>
+                <h2>Tableaux</h2>
+                <table border="1">
+                    <caption>Exemple de tableau</caption>
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Âge</th>
+                            <th colspan="2">Adresse</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Jean</td>
+                            <td>25</td>
+                            <td>24 rue des Mimosas</td>
+                            <td>Paris</td>
+                        </tr>
+                        <tr>
+                            <td>Marie</td>
+                            <td>30</td>
+                            <td>12 rue des Lilas</td>
+                            <td>Lyon</td>
+                        </tr>
+                        <tr>
+                            <td>Paul</td>
+                            <td>28</td>
+                            <td>8 rue des Roses</td>
+                            <td>Marseille</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Alice</td>
+                            <td rowspan="2">35</td>
+                            <td>5 rue des Tulipes</td>
+                            <td>Bordeaux</td>
+                        </tr>
+                        <tr>
+                            <td>10 rue des Violettes</td>
+                            <td>Nantes</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Total : 4 personnes</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 - Site d'entraînement HTML pour étudiants</p>
+        </footer>
+
+    </body>
+</html>
