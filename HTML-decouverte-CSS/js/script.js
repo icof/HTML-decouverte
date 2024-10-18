@@ -1,1 +1,0 @@
-console.log('Bienvenue dans le js/script.js !');
