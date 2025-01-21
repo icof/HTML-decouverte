@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphique de Températures</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Graphique de Températures</h1>
+    
+    <canvas id="temperatureChart" width="400" height="200"></canvas>
+    <script>
+        // Fonction pour récupérer les données de l'API OpenWeatherMap
+        async function fetchWeatherData() {
+            const apiKey = '7fbfa24be7dfbbc2dae7b8579a69ea08'; // Remplacez par votre clé API OpenWeatherMap
+            const city = 'Lyon'; // Remplacez par la ville de votre choix
+            const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`);
+            const data = await response.json();
+            return data;
+            console.log(data);
+        }
+
+        // Fonction pour initialiser le graphique
+        async function initChart() {
+            const weatherData = await fetchWeatherData();
+            const labels = weatherData.list.map(item => item.dt_txt);
+            const temperatures = weatherData.list.map(item => item.main.temp);
+
+            const ctx = document.getElementById('temperatureChart').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Températures à Lyon',
+                        data: temperatures,
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        // Initialiser le graphique au chargement de la page
+        window.onload = initChart;
+    </script>
+</body>
+</html>
