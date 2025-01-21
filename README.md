@@ -49,6 +49,7 @@ Ce dossier contient des exemples et des démonstrations de l'utilisation de Boot
   - `menuDeroulant.js` : Un script pour un menu déroulant basique.
   - `menuDeroulantEvolution.js` : Une version évoluée du menu déroulant.
 - `index.html` : La page d'accueil du projet Bootstrap-JS.
+- `temperatures.html` : Une page interrogeant une API et construisant un résultat graphique.
 
 ### projet-CV/
 Ce dossier contiendra les fichiers pour les activitées de prise en main qui vous sont demandées en TP.

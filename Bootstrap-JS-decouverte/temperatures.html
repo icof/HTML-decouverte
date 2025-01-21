@@ -4,14 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Graphique de Températures</title>
+    <!-- On inclus la librairie Chart.js pour afficher le graphique des températures. -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <h1>Graphique de Températures</h1>
-    
+    <p>
+        Cette page affiche un graphique des températures à Lyon pour les prochains jours. 
+        <br>
+        Elle utilise l'API <a href="https://api.openweathermap.org" target="_blank">Openweathermap</a> pour récupérer les données puis les affiche dans un graphique en utilisant la librairie <a href="https://www.chartjs.org" target="_blank">Chart.js</a>.
+    </p>
+
     <canvas id="temperatureChart" width="400" height="200"></canvas>
     <script>
-        // Fonction pour récupérer les données de l'API OpenWeatherMap
+        // Fonction pour récupérer les données de l'API OpenWeatherMap. Le script est asynchrone pour attendre la réponse de l'API. Il envoie une requête à l'API OpenWeatherMap pour récupérer les données météo de la ville de Lyon. Il retourne les données au format JSON.
         async function fetchWeatherData() {
             const apiKey = '7fbfa24be7dfbbc2dae7b8579a69ea08'; // Remplacez par votre clé API OpenWeatherMap
             const city = 'Lyon'; // Remplacez par la ville de votre choix
@@ -21,7 +27,7 @@
             console.log(data);
         }
 
-        // Fonction pour initialiser le graphique
+        // Fonction pour initialiser le graphique. Elle récupère les données météo, extrait les températures et les dates, puis crée un graphique avec Chart.js. Le script appelle la fonction fetchWeatherData pour récupérer les données météo, puis extrait les températures et les dates des données. Enfin, il crée un graphique avec Chart.js en utilisant les températures comme données et les dates comme étiquettes.
         async function initChart() {
             const weatherData = await fetchWeatherData();
             const labels = weatherData.list.map(item => item.dt_txt);
@@ -50,8 +56,10 @@
             });
         }
 
-        // Initialiser le graphique au chargement de la page
+        // Appel de la fonction initChart lors du chargement de la page ce qui permet d'afficher le graphique des températures à Lyon.
         window.onload = initChart;
     </script>
+
+
 </body>
 </html>
