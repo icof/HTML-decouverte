@@ -24,8 +24,8 @@
             const city = 'Lyon'; // Remplacez par la ville de votre choix
             const response = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=${apiKey}`);
             const data = await response.json();
-            return data;
             console.log(data);
+            return data;
         }
 
         // Fonction pour initialiser le graphique. Elle récupère les données météo, extrait les températures et les dates, puis crée un graphique avec Chart.js. Le script appelle la fonction fetchWeatherData pour récupérer les données météo, puis extrait les températures et les dates des données. Enfin, il crée un graphique avec Chart.js en utilisant les températures comme données et les dates comme étiquettes.
