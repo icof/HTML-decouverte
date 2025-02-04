@@ -4,24 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random User</title>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        .card {
+            display: inline-block;
+            margin: 10px;
+            width: 18rem;
+        }
+    </style>
 </head>
 <body>
-    <button onclick="window.location.href='../index.html'">Retour</button>
-    <h1>
-        
-    </h1>
-    <p>
-        Cette page affiche la fiche d'identité d'une personne fictive générée. 
-        <br>
-        Elle utilise l'API <a href="https://randomuser.me" target="_blank">randomuser.me</a> pour récupérer les données puis afficher une carte d'identité.
-    </p>
-    <p>
-        Vous pouvez tester le retour de l'API en observant la réponse de la requete à l'API dans l'onglet "Network" de votre console de développement (partie response). Vous pouvez aussi tester le retour de l'API en observant la console de votre navigateur (partie console) car on a loggé les données reçues de l'API.
-    </p>
-    <p>
-        Pour recharger la page et obtenir une nouvelle fiche d'identité, vous pouvez appuyer sur F5 ou rafraîchir la page.
-    </p>
+    <div class="container">
+        <button class="btn btn-primary mt-3" onclick="window.location.href='../index.html'">Retour</button>
+        <h1>
+            Fiche d'identité d'une personne fictive
+        </h1>
+        <p>
+            Cette page affiche la fiche d'identité d'une personne fictive générée. 
+            <br>
+            Elle utilise l'API <a href="https://randomuser.me" target="_blank">randomuser.me</a> pour récupérer les données puis afficher une carte d'identité.
+        </p>
+        <p>
+            Vous pouvez tester le retour de l'API en observant la réponse de la requete à l'API dans l'onglet "Network" de votre console de développement (partie response). Vous pouvez aussi tester le retour de l'API en observant la console de votre navigateur (partie console) car on a loggé les données reçues de l'API.
+        </p>
+        <p>
+            Pour recharger la page et obtenir une nouvelle fiche d'identité, vous pouvez appuyer sur F5 ou rafraîchir la page.
+        </p>
+        <span id="cardContainer">
+            <!-- La carte d'identité sera ajoutée ici par JavaScript -->
+        </span>
+            
+    </div>
+    
 
     <script>
         // Fonction pour récupérer les données de l'API randomUser. Le script est asynchrone pour attendre la réponse de l'API. Il envoie une requête à l'API randomUser pour récupérer les données d'un profil fictif. Il retourne les données au format JSON.
@@ -33,7 +50,7 @@
         }
 
         fetchUser().then(data => {
-            const card = document.createElement('div');
+            const card = document.getElementById('cardContainer');
             card.classList.add('card');
             card.style.width = '18rem';
             card.style.margin = '10px';
@@ -46,7 +63,6 @@
                     <p class="card-text">Ville : ${data.results[0].location.city}</p>
                 </div>
             `;
-            document.body.appendChild(card);
         });
 
     </script>
