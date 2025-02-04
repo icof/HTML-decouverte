@@ -51,6 +51,18 @@ Ce dossier contient des exemples et des démonstrations de l'utilisation de Boot
 - `index.html` : La page d'accueil du projet Bootstrap-JS.
 - `temperatures.html` : Une page interrogeant une API et construisant un résultat graphique.
 
+### API-JS-decouverte/
+### API-JS-decouverte/
+Ce dossier contient des exemples et des démonstrations de l'utilisation des APIs avec JavaScript.
+
+- **css/** : Contient les fichiers CSS pour le style des pages.
+  - `styles.css` : Le fichier CSS principal pour les styles.
+- **exemples/** : Contient des exemples d'interaction avec des APIs.
+  - `randomUser.html` : Une page affichant une fiche d'identité générée aléatoirement en utilisant l'API randomuser.me.
+  - `pokedex.html` : Une page affichant un tombinoscope de Pokémon en utilisant une API Pokémon.
+  - `temperatures.html` : Une page un graphe des températures prévues sur 5 jours à Lyon.
+- `index.html` : La page d'accueil du projet API-JS.
+
 ### projet-CV/
 Ce dossier contiendra les fichiers pour les activitées de prise en main qui vous sont demandées en TP.
 
