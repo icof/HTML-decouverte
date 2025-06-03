@@ -13,6 +13,7 @@
     http-server
     ```
 4. Dans la fenêtre de prompt, cliquer sur "Ouvrir dans un navigateur".
+Dans l'onglet ports vous pouvez également retrouver le service http exposé sur le port 8080 du codespace et l'ouvrir dans le navigateur.
 
 
 ## Sites de démo
