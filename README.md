@@ -1,20 +1,8 @@
-# sites de démo HTML/CSS/JS
-# Pour les modules d'apprentissage des langages
+# Sites de démo HTML/CSS/JS
+Modules d'apprentissage des langages
 
-## Lancer un Codespace
-
-1. Ouvrir le terminal de VSCode.
-2. Dans le terminal, taper la commande :
-    ```sh
-    npm i -g http-server
-    ```
-3. Dans le terminal, taper la commande :
-    ```sh
-    http-server
-    ```
-4. Dans la fenêtre de prompt, cliquer sur "Ouvrir dans un navigateur".
-Dans l'onglet ports vous pouvez également retrouver le service http exposé sur le port 8080 du codespace et l'ouvrir dans le navigateur.
-
+## Environnement technique
+Ce dépot est configuré pour être ouvert dans un Codespace de base Ubuntu.
 
 ## Sites de démo
 
@@ -65,4 +53,22 @@ Ce dossier contient des exemples et des démonstrations de l'utilisation des API
 
 ### projet-CV/
 Ce dossier contiendra les fichiers pour les activitées de prise en main qui vous sont demandées en TP.
+
+
+## Lancement du serveur web et exposition du site sur le port 8080
+
+Dans le terminal de VSCode : 
+1. Tapez la commande suivante pour installer le service http-server :
+    ```sh
+    npm i -g http-server
+    ```
+2. Tapez la commande suivante pour démarrer le service :
+    ```sh
+    http-server
+    ```
+Aux prochaines ouvertures du codespace vous n'aurez que la seconde étape à réaliser.
+    
+Ensuite, si une fenêtre de prompt vous le propose, cliquez sur "Ouvrir dans un navigateur" pour afficher le site web exposé.
+Sinon, retrouvez dans l'onglet ports le service http exposé sur le port 8080 du codespace et ouvrez-le dans le navigateur.
+
 
