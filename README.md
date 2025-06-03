@@ -52,7 +52,6 @@ Ce dossier contient des exemples et des démonstrations de l'utilisation de Boot
 - `temperatures.html` : Une page interrogeant une API et construisant un résultat graphique.
 
 ### API-JS-decouverte/
-### API-JS-decouverte/
 Ce dossier contient des exemples et des démonstrations de l'utilisation des APIs avec JavaScript.
 
 - **css/** : Contient les fichiers CSS pour le style des pages.
