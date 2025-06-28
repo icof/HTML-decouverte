@@ -1,19 +1,8 @@
-# sites de démo HTML/CSS/JS
-# Pour les modules d'apprentissage des langages
+# Sites de démo HTML/CSS/JS
+Modules d'apprentissage des langages
 
-## Lancer un Codespace
-
-1. Ouvrir le terminal de VSCode.
-2. Dans le terminal, taper la commande :
-    ```sh
-    npm i -g http-server
-    ```
-3. Dans le terminal, taper la commande :
-    ```sh
-    http-server
-    ```
-4. Dans la fenêtre de prompt, cliquer sur "Ouvrir dans un navigateur".
-
+## Environnement technique
+Ce dépot est configuré pour être ouvert dans un Codespace de base Ubuntu.
 
 ## Sites de démo
 
@@ -49,7 +38,37 @@ Ce dossier contient des exemples et des démonstrations de l'utilisation de Boot
   - `menuDeroulant.js` : Un script pour un menu déroulant basique.
   - `menuDeroulantEvolution.js` : Une version évoluée du menu déroulant.
 - `index.html` : La page d'accueil du projet Bootstrap-JS.
+- `temperatures.html` : Une page interrogeant une API et construisant un résultat graphique.
+
+### API-JS-decouverte/
+Ce dossier contient des exemples et des démonstrations de l'utilisation des APIs avec JavaScript.
+
+- **css/** : Contient les fichiers CSS pour le style des pages.
+  - `styles.css` : Le fichier CSS principal pour les styles.
+- **exemples/** : Contient des exemples d'interaction avec des APIs.
+  - `randomUser.html` : Une page affichant une fiche d'identité générée aléatoirement en utilisant l'API randomuser.me.
+  - `pokedex.html` : Une page affichant un tombinoscope de Pokémon en utilisant une API Pokémon.
+  - `temperatures.html` : Une page un graphe des températures prévues sur 5 jours à Lyon.
+- `index.html` : La page d'accueil du projet API-JS.
 
 ### projet-CV/
 Ce dossier contiendra les fichiers pour les activitées de prise en main qui vous sont demandées en TP.
+
+
+## Lancement du serveur web et exposition du site sur le port 8080
+
+Dans le terminal de VSCode : 
+1. Tapez la commande suivante pour installer le service http-server :
+    ```sh
+    npm i -g http-server
+    ```
+2. Tapez la commande suivante pour démarrer le service :
+    ```sh
+    http-server
+    ```
+Aux prochaines ouvertures du codespace vous n'aurez que la seconde étape à réaliser.
+    
+Ensuite, si une fenêtre de prompt vous le propose, cliquez sur "Ouvrir dans un navigateur" pour afficher le site web exposé.
+Sinon, retrouvez dans l'onglet ports le service http exposé sur le port 8080 du codespace et ouvrez-le dans le navigateur.
+
 

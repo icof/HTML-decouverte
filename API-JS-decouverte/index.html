@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Bootstrap, JavaScript, entraînement, étudiants">
+    <title>Structure de base - Site de démo API/JS</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- bibliothèque de styles pour Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- scripts pour Bootstrap (nécessaire pour les composants JavaScript de Bootstrap) : Popper.js puis Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+
+    <!-- bibliothèque de styles pour les icônes Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+
+<body id="top">
+    <header>
+        <div class="bg-primary text-white text-center py-3">
+            <h1>Site de démo de pages interrogeant des API avec JS et affichant les résultats</h1>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Accueil</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#intro">Introduction</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#exemple1">Exemple 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#exemple2">Exemple 2</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#exemple3">Exemple 3</a>
+                        </li>
+                        
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-content container">
+        <section class="border p-3 mb-4 bg-light shadow-sm" id="intro">
+            <h2 texteMenu="Introduction">Introduction<a href="#top" style="color:inherit;text-decoration: none;"> ↑</a></h2>
+            <p>
+                Une API (Application Programming Interface) est un ensemble de règles qui permet à une application de communiquer avec une autre. Elle agit comme un intermédiaire entre différentes applications ou services.
+                <br><br>
+                Les APIs sont utilisées pour :
+                <ul>
+                    <li>Accéder à des bases de données distantes.</li>
+                    <li>Récupérer des informations en temps réel (météo, géolocalisation, prix d’actions...).</li>
+                    <li>Intégrer des services tiers (paiement, authentification, cartes...).</li>
+                </ul>
+                Il existe plusieurs types d’APIs, mais nous allons nous concentrer sur les APIs REST, qui utilisent des requêtes HTTP pour envoyer et recevoir des données au format JSON.
+                <br><br>
+                L'interaction avec une API REST se fait en envoyant des requêtes HTTP à une URL spécifique. Ces requêtes utilisent différentes méthodes selon le type d’interaction :
+                <ul>
+                    <li>GET : Récupérer des informations.</li>
+                    <li>POST : Envoyer des données.</li>
+                    <li>PUT : Mettre à jour des informations.</li>
+                    <li>DELETE : Supprimer des informations.</li>
+                </ul>
+                En JavaScript, on utilise la fonction <code>fetch()</code> pour envoyer des requêtes HTTP.
+                <br><br>
+                Exemple de code :
+                <pre><code>
+        const apiKey = "VOTRE_CLE_API";
+        const ip = "8.8.8.8";
+        fetch(`https://api.apibundle.io/ip-lookup?apikey=${apiKey}&ip=${ip}`)
+            .then(response => response.json()) // Convertir la réponse en JSON
+            .then(data => console.log(data))   // Afficher les données
+            .catch(error => console.error("Erreur :", error));
+                </code></pre>
+                Explication du code :
+                <ol>
+                    <li>On appelle <code>fetch()</code> avec l’URL de l’API et notre clé API.</li>
+                    <li><code>.then(response => response.json())</code> : Convertit la réponse en JSON.</li>
+                    <li><code>.then(data => console.log(data))</code> : Affiche les données récupérées dans la console.</li>
+                    <li><code>.catch(error => console.error(...))</code> : Gère les erreurs éventuelles.</li>
+                </ol>
+            </p>
+
+            <p>
+                Voici plusieurs exemples d'utilisation de JavaScript pour interroger des APIs et afficher les résultats sur une page web :
+            </p>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="exemple1">
+                <h3 texteMenu="Menu automatique">Exemple 1 : Interrogation d'une API et affichage d'un graphique<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>Voici un exemple simple d'appel d'une API en JavaScript (envoi d'une requête https) puis de construction d'une carte de profil : <a href="exemples/randomUser.html">randomUser.html</a>
+                </p>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="exemple2">
+                <h3 texteMenu="Menu automatique">Exemple 2 : Interrogation d'une API et affichage des résultats<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>Voici un exemple simple d'appel d'une API en JavaScript (envoi d'une requête https) puis d'affichage des résultats sur une page web : <a href="exemples/pokedex.html">pokedex.html</a>
+                </p>
+            </article>
+
+            <article class="border p-3 mb-4 bg-white shadow-sm" id="exemple3">
+                <h3 texteMenu="Menu automatique">Exemple 3 : Interrogation d'une API sécurisée (necessitant un jeton de connexion) et affichage d'un graphique<a href="#top" style="color:inherit;text-decoration: none;" > ↑</a></h3>
+                <p>Voici un exemple plus complexe, d'appel d'une API en JavaScript (envoi d'une requête https) puis de construction d'un graphique en exploitant les résultats et en utilisant une bibliothèque graphique (chart.js) : <a href="exemples/temperatures.html">page temperatures.html</a>
+                </p>
+            </article>
+
+        </section>
+    </main>
+
+    
+    <footer class="bg-light text-center py-3">
+        <p>&copy; 2024 - Site d'entraînement bootstrap et JS pour étudiants</p>
+    </footer>
+
+</body>
+</html>
